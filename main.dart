@@ -1,10 +1,9 @@
 void main() {
-  // Dynamic Type
-  var name; // dynamic name;
-  name = '장조격';
-  if (name is String) {
-    // name is String
+  // null safety
+  String? gunal = 'gunal'; // nullable
+  gunal = null;
+  if (gunal != null) {
+    gunal.isNotEmpty;
   }
-  name = 12;
-  name = true;
+  gunal?.isNotEmpty; // 단축
 }
