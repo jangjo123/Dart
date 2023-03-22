@@ -1,15 +1,14 @@
 String sayHello({
   required String name,
-  int age = 1,
-  String country = 'wakanda',
-}) {
-  return "Hello $name, you are $age, and you come from $country";
-}
+  int age = 10,
+  String country = 'Korea',
+}) =>
+    "Hello $name, you are $age, and you come from $country";
 
 void main() {
-  print(sayHello(
+  sayHello(
+    name: "gunal",
     age: 20,
-    country: 'Korea',
-    name: 'gunal',
-  ));
+    country: "korea",
+  );
 }
