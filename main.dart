@@ -1,4 +1,5 @@
 void main() {
-  final name = 'gunal'; // var -> final(const)
-  // final String name;
+  late final String name;
+  // do something, go to api
+  name = 'gunal';
 }
