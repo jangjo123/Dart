@@ -1,15 +1,6 @@
-import 'dart:ffi';
-
 void main() {
-  var giveMeFive = true;
-  List<int> numbers = [
-    1,
-    2,
-    3,
-    4,
-    if (giveMeFive) 5,
-  ];
-  numbers.add(1);
-  print(numbers.last);
-  print(numbers);
+  var name = 'gunal';
+  var age = 10;
+  var greeting = "Hello everyone, my name is $name and I'm ${age + 10}";
+  print(greeting);
 }
