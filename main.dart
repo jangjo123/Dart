@@ -1,4 +1,8 @@
+String sayHello(String potato) =>
+    "Hello $potato nice to meet you!"; // == return "Hello $$!@"
+
+num plus(num a, num b) => a + b;
+
 void main() {
-  var numbers = {1, 2, 3, 4};
-  Set<int> numbers2 = {1, 2, 3, 4};
+  print(sayHello('gunal'));
 }
