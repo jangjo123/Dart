@@ -1,17 +1,25 @@
 class Player {
-  final String name = 'gunal';
-  int xp = 1500;
+  final String name;
+  int xp;
+
+  Player(this.name, this.xp);
+
+  // late final String name;
+  // late int xp;
+
+  // Player(String name, int xp) {
+  //   this.name = name;
+  //   this.xp = xp;
+  // }
 
   void sayHello() {
-    var name = 123;
-    print("Hi my name is ${this.name}"); // 이런 경우가 아니라면 this는 안쓰는게 좋음
+    print("Hi my name is ${name}");
   }
 }
 
 void main() {
-  var player = Player();
-  print(player.name);
+  var player = Player("gunal", 1500);
   player.sayHello();
-  // player.name = 'lalala'; // final때문에 실행 불가
-  // print(player.name);
+  var player2 = Player("nico", 2000);
+  player2.sayHello();
 }
