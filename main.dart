@@ -1,7 +1,11 @@
+enum Team { red, blue }
+
+enum XPLevel { beginner, medium, pro }
+
 class Player {
   late String name;
-  late int xp;
-  late String team;
+  late XPLevel xp;
+  late Team team;
 
   Player({
     required name,
@@ -15,9 +19,9 @@ class Player {
 }
 
 void main() {
-  var gunal = Player(name: 'gunal', xp: 1200, team: 'red')
+  var gunal = Player(name: 'gunal', xp: 1200, team: Team.blue)
     ..name = 'la' // gunal.name = 'la'
-    ..xp = 122313
-    ..team = 'blue'
+    ..xp = XPLevel.medium
+    ..team = Team.red
     ..sayHello();
 }
