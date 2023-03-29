@@ -1,16 +1,15 @@
 class Player {
   final String name;
   int xp;
+  String team;
+  int age;
 
-  Player(this.name, this.xp);
-
-  // late final String name;
-  // late int xp;
-
-  // Player(String name, int xp) {
-  //   this.name = name;
-  //   this.xp = xp;
-  // }
+  Player({
+    required this.name,
+    required this.xp,
+    required this.team,
+    required this.age,
+  });
 
   void sayHello() {
     print("Hi my name is ${name}");
@@ -18,8 +17,16 @@ class Player {
 }
 
 void main() {
-  var player = Player("gunal", 1500);
-  player.sayHello();
-  var player2 = Player("nico", 2000);
-  player2.sayHello();
+  var player = Player(
+    name: "gunal",
+    xp: 1200,
+    team: "red",
+    age: 21,
+  );
+  var player2 = Player(
+    name: "nico",
+    xp: 2000,
+    team: "blue",
+    age: 12,
+  );
 }
