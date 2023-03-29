@@ -1,3 +1,17 @@
+class Strong {
+  final double strengthLevel = 1500.99;
+}
+
+class QuickRunner {
+  void runQuick() {
+    print("ruuuuun!");
+  }
+}
+
+class Tall {
+  final double height = 1.99;
+}
+
 class Human {
   final String name;
   Human(this.name);
@@ -8,26 +22,21 @@ class Human {
 
 enum Team { red, blue }
 
-class Player extends Human {
+class Player with Strong, QuickRunner, Tall {
   final Team team;
 
   Player({
     required this.team,
     required String name,
-  }) : super(name);
-
-  @override
-  void sayHello() {
-    super.sayHello();
-    print("and I player for ${team}");
-  }
+  }) 
 }
 
+class Kid with QuickRunner {}
 void main() {
   var player = Player(
     team: Team.red,
     name: "gunal",
   );
 
-  player.sayHello();
+  player.runQuick();
 }
